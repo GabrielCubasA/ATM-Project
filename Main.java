@@ -2,7 +2,7 @@
 import javax.swing.JOptionPane;
 import java.util.HashMap;
 
-public class Main {
+public class Main{
 
     // Creating a HashMap to store Account objects with their associated usernames
     static HashMap<String, Account> accounts = new HashMap<String, Account>();
@@ -20,20 +20,11 @@ public class Main {
             
             // If the user wants to create a new account
             if ("1".equals(menuSelection)) {
+
+                Organize Organize = new Organize();
+                Organize.accountCreation();
                 
-                // Asking the user for their new username, password, and initial balance
-                String createUser = JOptionPane.showInputDialog("Create new username: ");
-                int createPassword = Integer.parseInt(JOptionPane.showInputDialog("Create new password: "));
-                double balance = Double.parseDouble(JOptionPane.showInputDialog("Enter your starting balance: "));
-
-                // Creating a new Account object with the provided details
-                Account account = new Account(createUser, createPassword, balance);
-
-                // Storing the new Account object in the HashMap
-                accounts.put(createUser, account);
-
-                // Informing the user that the account was created successfully
-                JOptionPane.showMessageDialog(null, "Account created successfully!");
+                
             } 
 
             // If the user wants to log in to an existing account
